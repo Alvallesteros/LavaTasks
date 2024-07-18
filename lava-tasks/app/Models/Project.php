@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Project extends Model
 {
 	use HasFactory;
-	
+
 	protected $table = 'projects';
 	public $timestamps = false;
 	protected $fillable = [
@@ -18,7 +18,7 @@ class Project extends Model
 	];
 
 
-	public function tasks(); HasMany
+	public function tasks(): HasMany
 	{
 		return $this->HasMany(Task::class);
 	}

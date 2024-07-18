@@ -30,9 +30,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('tasks', function(Blueprint Stable) {
+        Schema::table('tasks', function(Blueprint $table) {
             if (Schema::hasColumn('tasks', 'project_id')) {
-                $table->dropForeign(['project_id'])
+                $table->dropForeign(['project_id']);
             }
         });
 
